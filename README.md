@@ -2,11 +2,11 @@
 
 > Weather App
 
-#Project Description
+# Project Description
 
 >It is a small full stack app that you can know the weather for any city you want our stack is Express,Node,ReactJs and MongoDb. 
 
-##Team 
+## Team 
 
   - __Development Team Members__: Nadera Qaoud, Mohammed Ali, Anas Abualwahed and Ahmed Abuallah.
 
