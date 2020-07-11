@@ -2,7 +2,7 @@
 
 > Weather App
 
-# Project Description
+# Description
 
 >It is a small full stack app that you can know the weather for any city you want our stack is Express,Node,ReactJs and MongoDb. 
 
@@ -13,7 +13,7 @@
 ## Table of Contents
 
 1. [Usage](#Usage)
-1. [Project Description](#Project Description)
+1. [Description](#Description)
 1. [Technologie](#Technologie)
 1. [Team](#team)
 
