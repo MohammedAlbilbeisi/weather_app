@@ -4,12 +4,11 @@
   "description": "Cloud9",
   "main": "index.js",
   "scripts": {
-<<<<<<< Updated upstream
-    "test": "echo \"Error: no test specified\" && exit 1"
-=======
+
+
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon src/index.js"
->>>>>>> Stashed changes
+
   },
   "repository": {
     "type": "git",
@@ -20,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/P1-G9/weather_app/issues"
   },
-  "homepage": "https://github.com/P1-G9/weather_app#readme"
+  "homepage": "https://github.com/P1-G9/weather_app#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.23",
+    "mongoose-type-email": "^1.0.12",
+    "nodemon": "^2.0.4"
+  }
 }
