@@ -17,3 +17,4 @@ let accountsSchema = mongoose.Schema({
 let AccountsModel = mongoose.model("Accounts", accountsSchema);
 
 module.exports.AccountsModel = AccountsModel;
+
