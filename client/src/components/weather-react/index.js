@@ -23,35 +23,29 @@ function Weathers() {
 
 return `${day} ${date} ${month} ${year}`
 }
+ 
+return (
 
-
-  
-  return (
-   
-
-    <div className="weathers">
-   <main>
-    <div  className="search-box">
-    <input type="text"
-    className="search-bar"
-    placeholder="Search..."
-    />
-    
-    </div>
-    <div className="location-box">
-    <div className="location">Gaza City,status</div>
-    <div className="date">{dateBuilder(new Date())}</div>
-    </div>
-    <div className="weather-box">
-    <div className="temp">
-    15°C
-    </div>
-    <div className="weather">Sunny</div>
-    </div>
-   </main>
-
-    </div>
-  );
+  <div className="weathers">
+    <main>
+      <div  className="search-box">
+        <input type="text"
+        className="search-bar"
+        placeholder="Search..."/>    
+      </div>
+      <div className="location-box">
+        <div className="location">Gaza City,status</div>
+        <div className="date">{dateBuilder(new Date())}</div>
+      </div>
+      <div className="weather-box">
+        <div className="temp">
+        15°C
+        </div>
+        <div className="weather">Sunny</div>
+      </div>
+    </main>
+  </div>
+);
 }
 
 export default Weathers;

@@ -1,7 +1,7 @@
 import React from "react";
 import Weathers from "./components/weather-react";
-import Bar from './component/navBar/navBar';
-import List from './component/list/list';
+import Bar from './components/navBar/navBar';
+import List from './components/list/list';
 import "./App.css";
 
 function App() {
