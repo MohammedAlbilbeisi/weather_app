@@ -8,14 +8,14 @@ body {
   font: 'montseratt', sans-serif ;
 }
 
-.weathers{
+.Weathers{
   background-image: url('./pic/cold1.jpg') ;
   background-size: cover;
   background-position: bottom;
   transition: 0.4 ease-out;
 }
 
-.app.warm {
+.Weathers.warm {
   background-image: url('./pic/warm-bg.jpg');
 }
 
@@ -28,7 +28,9 @@ main {
 .search-box {
   width: 100%;
   margin: 0 0 75px;
+
 }
+
 
 .search-box .search-bar {
   display: block;

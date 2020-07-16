@@ -2,8 +2,8 @@ import React from "react";
 import Weathers from "./components/weather-react"
 import Login from "./components/log_in"
 import SignUp from "./components/sign_up"
-import Bar from './component/navBar/navBar';
-import List from './component/list/list';
+import Bar from './components/navBar';
+import List from './components/list';
 import "./App.css";
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
       <Bar/>
       <Weathers />
       <List/>
+     
     </div>
   );
 }
