@@ -2,7 +2,7 @@ import React from 'react';
 
 class list extends React.Component{
     state= {
-        list:['Anas']
+        list:["Gaza","UK","US"]
     }
     render(){
         return(

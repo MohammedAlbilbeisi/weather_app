@@ -1,11 +1,16 @@
 import React from "react";
 import Main from "./main.js"
 import Weathers from "./components/weather-react"
-import Bar from './components/navBar/navBar.js';
+
 import SignUp from "./components/sign_up"
+
 import Login from "./components/log_in"
-import List from './components/list/list.js';
+
 import { BrowserRouter , Switch , Route } from "react-router-dom";  
+
+import Bar from './components/navBar';
+import List from './components/list';
+
 import "./App.css";
 
 function App() {
