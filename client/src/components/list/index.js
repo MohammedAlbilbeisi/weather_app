@@ -1,9 +1,13 @@
 import React from 'react';
 
 class list extends React.Component{
+    
     state= {
-        list:["Gaza","UK","US"]
+        
+        list:[]
+       
     }
+  
     render(){
         return(
             <div className="list">
