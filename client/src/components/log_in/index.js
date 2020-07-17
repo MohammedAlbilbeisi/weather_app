@@ -1,49 +1,67 @@
 import React from "react";
+import axios from "axios";
+import "./../sign_up/register.css"
 class Login extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      username : "",
+      password : "",
+
+    };
   }
 
-  handelEvent(e) {}
+  handelChange(e){
+    this.setState({
+      [e.target.name]:e.target.value,
+    })
+  }
+  handelSubmite(e) {
+    e.preventDefault();
+    axios.post('http//localhost:4000/login', {
+    username: this.state.username,
+    password: this.state.password,
+  })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+  }
 
   render() {
     return (
       <div className="inner-container">
-        <div className="header">
-          Login
-        </div>
-        <div className="box">
-
+        
+        <form  onSubmit={this.handelSubmite.bind(this)} className="box">
+         <h1 className="header">
+                  Log In
+                </h1>
           <div className="input-group">
-            <label htmlFor="username">Username</label>
+            
             <input
               type="text"
               name="username"
+              value = {this.state.username}
+              onChange = {this.handelChange.bind(this)}
               className="login-input"
               placeholder="Username"/>
-          </div>
-
+          </div><br/>
           <div className="input-group">
-            <label htmlFor="password">Password</label>
             <input
               type="password"
               name="password"
+              value = {this.state.password}
+              onChange = {this.handelChange.bind(this)}
               className="login-input"
               placeholder="Password"/>
-          </div>
-
-          <button
-            type="button"
-            className="login-btn"
-            onClick={this
-            .handelEvent
-            .bind(this)}>Login</button>
-        </div>
+          </div><br />
+          <button class="btn">Log In </button>
+        </form>
       </div>
     );
   }
-
 }
 export default Login;
