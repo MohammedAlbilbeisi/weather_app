@@ -10,9 +10,9 @@ mongoose
     console.log("Error when connected to the DB", err);
   });
 let accountsSchema = mongoose.Schema({
-  userName: { type: String, unique: true, required: true },
+  username: { type: String, unique: true, required: true },
   email: { type: String, required: true },
-  password: { type: String, required: true },
+  password: { type: String, required: true }
 });
 let AccountsModel = mongoose.model("Accounts", accountsSchema);
 

@@ -1,6 +1,6 @@
 import React from "react";
 import Login from "./../log_in/index.js"
-import {BrowserRouter,Switch,Route,Link}from "react-router-dom";   
+import { BrowserRouter as Router,Route,Link}from "react-router-dom";   
 import axios from "axios";
 import "./register.css"
 class SignUp extends React.Component {
@@ -22,10 +22,11 @@ class SignUp extends React.Component {
   }
   handelSubmite(e) {
     e.preventDefault();
-    axios.post('http//localhost:3000/user', {
+    axios.post('http//localhost:4000/signup', {
     username: this.state.username,
-    password: this.state.password,
     email: this.state.email,
+    password: this.state.password,
+    
   })
   .then(function (response) {
     console.log(response);
@@ -75,10 +76,11 @@ class SignUp extends React.Component {
               className="login-input"
               placeholder="Password"/>
           </div><br />
-          <button class="btn">Sign Up</button>
+          <button class="btn"></button>
           <div>
-          <p><Link to = "/login">log in</Link> if you have an account</p>
-          <Route path = "/login"></Route>
+          <Router>
+          <p><a href="/login">LongIn</a> if you have an account</p>
+          </Router>
           </div>
         </form>
       </div>
