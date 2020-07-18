@@ -5,9 +5,10 @@ const { sign } = require("jsonwebtoken");
 //   var { email } = req.headers;
 // };
 
-exports.post = (req, response) => {
-  var { userName, email, password } = req.body;
-  AccountsModel.find({ userName })
+exports.postUser = (req, response) => {
+  console.log("r  each...");
+  var { username, email, password } = req.body;
+  AccountsModel.find({ username })
     .then((res) => {
       if (res.length !== 0) {
         response.status(400).send("this user is  already registered");
@@ -16,7 +17,7 @@ exports.post = (req, response) => {
           .hash(password, 10)
           .then((hash) => {
             var newUser = new AccountsModel({
-              userName,
+              username,
               email,
               password: hash,
             });
@@ -26,26 +27,26 @@ exports.post = (req, response) => {
                 var { id } = res;
                 sign(id, process.env.SECRET, (err, resultCookie) => {
                   if (err) {
-                    response.status(401).send("Wrong in signin !");
+                    response.status(401).json("Wrong in signin !");
                   } else {
                     response.cookie("jwt", resultCookie, {
                       maxAge: 6048000000,
                     });
-                    response.status(200).send("Done !");
+                    response.status(200).json("Done !");
                   }
                 });
               })
               .catch((err) => {
                 console.log("Error>>>", err);
-                response.status(500).send("Sorry for that :( error in server ");
+                response.status(500).json("Sorry for that :( error in server ");
               });
           })
           .catch((err) => {
-            response.status(500).send("Sorry for that :( error in server ");
+            response.status(500).json("Sorry for that :( error in server ");
           });
       }
     })
     .catch((err) => {
-      res.status(500).send("Sorry for that :( error in server ");
+      res.status(500).json("Sorry for that :( error in server ");
     });
 };

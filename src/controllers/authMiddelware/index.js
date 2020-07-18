@@ -1,8 +1,8 @@
 var { verify } = require("jsonwebtoken");
 
 const verfiyToken = (req, response, next) => {
-  console.log("s", req.cookies);
-  var { jwt } = req.cookies;
+  var jwt = req.headers.cookie ? req.headers.cookie.split("=")[1] : undefined;
+
   if (jwt) {
     verify(jwt, process.env.SECRET, (err, res) => {
       if (err) {

@@ -1,10 +1,9 @@
 var userRouter = require("express").Router();
 var login = require("./login");
 var signup = require("./signup");
+var main = require("./main");
 var logout = require("./logout");
 var auth = require("./authMiddelware");
-const { response } = require("express");
-
 userRouter.get("/logout", logout.get);
 userRouter.post("/login", login.post);
 // userRouter.use((req, response, next) => {
@@ -14,8 +13,8 @@ userRouter.post("/login", login.post);
 //   };
 //   next();
 // });
-userRouter.post("/signup", signup.post);
+userRouter.post("/signup", signup.postUser);
 userRouter.use(auth);
-// userRouter.get("/home", signup.unique);
+userRouter.get("/Main", main.get);
 
 module.exports = userRouter;

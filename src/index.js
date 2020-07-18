@@ -1,7 +1,7 @@
 var app = require("./server.js");
 const port = 4000;
 const mongoose = require("mongoose");
-const mongUrl = " mongodb://localhost/usersdb";
+const mongUrl = " mongodb://localhost/weather";
 const dotenv = require("dotenv");
 dotenv.config();
 

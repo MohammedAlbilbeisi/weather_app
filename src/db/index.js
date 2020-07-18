@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const mongUrl = " mongodb://localhost/usersdb";
 require("mongoose-type-email");
 // mongoose
 //   .connect(mongUrl, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -10,7 +9,7 @@ require("mongoose-type-email");
 //     console.log("Error when connected to the DB", err);
 //   });
 let accountsSchema = mongoose.Schema({
-  userName: { type: String, unique: true, required: true },
+  username: { type: String, unique: true, required: true },
   email: { type: String, required: true },
   password: { type: String, required: true },
 });
