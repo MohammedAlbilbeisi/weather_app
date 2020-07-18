@@ -8,7 +8,6 @@ class Main extends React.Component {
       <div className="main">
         <Bar />
         <Weathers />
-        <List />
       </div>
     );
   }

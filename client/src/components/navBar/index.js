@@ -14,7 +14,7 @@ class bar extends React.Component {
             </li>
             {/* <li><a  className="H1" href="log in">log in</a></li> */}
             <li>
-              <a className="H1" href="sign up">
+              <a className="H1" href="main/logout">
                 log out
               </a>
             </li>
