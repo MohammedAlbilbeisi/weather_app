@@ -6,12 +6,11 @@ const { sign } = require("jsonwebtoken");
 // };
 
 exports.postUser = (req, response) => {
-  console.log("r  each...");
   var { username, email, password } = req.body;
   AccountsModel.find({ username })
     .then((res) => {
       if (res.length !== 0) {
-        response.status(400).send("this user is  already registered");
+        response.status(400).json("this user is  already registered");
       } else {
         bcryptjs
           .hash(password, 10)

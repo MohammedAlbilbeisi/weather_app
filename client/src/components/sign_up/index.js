@@ -35,7 +35,7 @@ class SignUp extends React.Component {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log("Success:", data);
+        alert(data);
         window.location.href = "/main/Main";
       })
       .catch((error) => {
