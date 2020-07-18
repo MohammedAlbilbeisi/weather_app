@@ -26,4 +26,16 @@ Project is created with:
 * NodeJS
 * ReactJs
 * MongoDB
-* ExpressJs
+* ExpressJs\
+
+## Quick Start
+
+```javascript
+// Install dependencies for root folder  & client folder
+npm install 
+
+// Run the app locally write this commad in each folder root   & client folder
+npm start
+
+// Server runs on http://localhost:5000 and client on http://localhost:3000
+```
